@@ -42,20 +42,22 @@ guest_lecture_project/
 └── manage.py
 
 
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/guest-lecture-scheduler.git
-cd guest-lecture-scheduler
+  ```bash
+  git clone https://github.com/your-username/guest-lecture-scheduler.git
+  cd guest-lecture-scheduler
 
-2. Create and Activate a Virtual Environment (optional but recommended)
+
+### 2. Create and Activate a Virtual Environment (optional but recommended)
 python -m venv env
 source env/bin/activate   # On Windows: env\Scripts\activate
 
 
-3. Install Python Dependencies
+### 3. Install Python Dependencies
 pip install -r requirements.txt
 
 ⚠️ Node modules. All necessary JS/CSS dependencies (like Bootstrap and FullCalendar) are loaded via CDN.
