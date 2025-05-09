@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="text-center py-5 bg-light">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Streamline Your Guest Lecture Scheduling</h1>
+        <p class="lead">Effortlessly manage, schedule, and participate in guest lectures — all in one place.</p>
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2">Login / Register</a>
+        <a href="#features" class="btn btn-outline-secondary btn-lg">Learn More</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4 text-center">Why Use This Platform?</h2>
+        <p class="text-center mx-auto" style="max-width: 800px;">
+            This platform simplifies the process of organizing academic guest lectures by offering role-based dashboards,
+            speaker management, registration tracking, and calendar integration.
+        </p>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light" id="features">
+    <div class="container">
+        <h2 class="mb-4 text-center">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🎭 Role-Based Access</h5>
+                        <p class="card-text">Admins, faculty, guest speakers, and students each have a tailored experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📅 Smart Scheduling</h5>
+                        <p class="card-text">Create, update, and manage lectures with ease.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">👤 Speaker Management</h5>
+                        <p class="card-text">Maintain profiles, bios, and contact details.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🗓️ Calendar View</h5>
+                        <p class="card-text">Intuitive weekly/monthly views of all events.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">✅ Registration & Attendance</h5>
+                        <p class="card-text">Track RSVPs and attendance with downloadable reports.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4 text-center">How It Works</h2>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h5>1. Faculty Creates Lecture</h5>
+                <p>and invites speaker</p>
+            </div>
+            <div class="col-md-3">
+                <h5>2. Speaker Confirms</h5>
+                <p>and updates bio</p>
+            </div>
+            <div class="col-md-3">
+                <h5>3. Students Register</h5>
+                <p>and attend session</p>
+            </div>
+            <div class="col-md-3">
+                <h5>4. Admin Downloads Report</h5>
+                <p>and manages data</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4 text-center">Testimonials</h2>
+        <blockquote class="blockquote text-center">
+            <p>“This platform made coordinating guest lectures across departments seamless.”</p>
+            <footer class="blockquote-footer">Faculty Member, <cite title="Engineering Dept.">Engineering Dept.</cite></footer>
+        </blockquote>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+        <div class="mb-2">
+            <a href="#about" class="text-light me-3">About</a>
+            <a href="#faq" class="text-light me-3">FAQ</a>
+            <a href="#contact" class="text-light me-3">Contact</a>
+            <a href="#privacy" class="text-light">Privacy</a>
+        </div>
+        <div class="mb-2">
+            <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-light me-2"><i class="bi bi-envelope"></i></a>
+        </div>
+        <small>© 2025 Guest Lecture Scheduler · All Rights Reserved</small>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Lecture Scheduler</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+    <a class="navbar-brand" href="{% url 'home' %}">Lecture Scheduler</a>
+    <div class="ms-auto">
+        {% if user.is_authenticated %}
+            <a href="{% url 'dashboard' %}" class="btn btn-outline-primary me-2">Dashboard</a>
+            <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container mt-4">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Bootstrap JS & Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<!-- Optional Footer Section -->
+<footer class="bg-light py-3 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Lecture Scheduler. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

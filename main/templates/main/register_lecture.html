@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Register for Lecture</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ lecture.title }}</h4>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong>Date & Time:</strong> {{ lecture.datetime }}</li>
+                        <li class="list-group-item"><strong>Speaker:</strong> {{ lecture.speaker_name }}</li>
+                        <li class="list-group-item"><strong>Venue:</strong> {{ lecture.venue }}</li>
+                        <li class="list-group-item"><strong>Link:</strong> <a href="{{ lecture.link }}" target="_blank">{{ lecture.link }}</a></li>
+                    </ul>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success">✅ Confirm Registration</button>
+                            <a href="{% url 'student_dashboard' %}" class="btn btn-outline-secondary">❌ Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if registered %}
+<script>
+    alert("✅ Successfully registered for the lecture!");
+    window.location.href = "{% url 'student_dashboard' %}";
+</script>
+{% endif %}
+{% endblock %}

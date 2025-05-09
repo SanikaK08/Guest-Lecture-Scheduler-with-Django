@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="alert alert-danger shadow-sm border border-danger rounded p-4 text-center">
+                <h2 class="mb-3"><i class="bi bi-shield-lock-fill"></i> Access Denied</h2>
+                <p class="lead">🚫 You do not have permission to view this page.</p>
+                <a href="{% url 'home' %}" class="btn btn-outline-danger mt-3">
+                    <i class="bi bi-house-door-fill"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
